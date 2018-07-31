@@ -1,9 +1,17 @@
 
 <div id="index-navigation">
   <div class="main-text-block">
-    <h1>Jesper Fridefors</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ab sint deserunt saepe ullam corporis quo aliquam. Voluptate debitis voluptatibus vel alias molestias facilis, laboriosam dicta asperiores sapiente tempore sed!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid earum veritatis excepturi nostrum libero eum. A esse aspernatur quia reprehenderit quos asperiores non! Ullam corporis laborum quas et voluptatibus minima.</p>
+    <h1>Titel</h1>
+    <p class="intro-greeting">Hej!</p>
+    <p>
+      Jag är en mjukvaruutvecklare och student på KTH och detta är min personliga sida.
+      Här kommer jag lägga upp lite småprojekt och skrivande.
+    </p>
+    <p>
+      Det jag har mest erfarenhet om är webbutveckling men intresserar mig för allt
+      som har med programmering att göra, samt musik och historia.
+    </p>
+    <p class="sign-off"><i>Jesper Fridefors</i></p>
   </div>
   <div class="img-block"></div>
   <nav>
@@ -11,7 +19,7 @@
       Navigering
     </h3>
     <ul>
-      <li><a href="#">Blog</a></li>
+      <li><a href="/blog">Blog</a></li>
       <li><a href="#">Om mig</a></li>
       <li><a href="#">Annat</a></li>
     </ul>
