@@ -7,7 +7,7 @@ module.exports = function(env) {
     devtool: production ? 'source-maps' : 'eval',
 
     entry: {
-      'js/app.js': './assets/js/app.js', 
+      'js/app.js': './assets/js/app.ts', 
     },
 
     output: {
@@ -27,17 +27,31 @@ module.exports = function(env) {
         {
           test: /\.scss$/,
           use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
+            {loader: 'style-loader'},
+            {loader: 'css-loader'},
+            {loader: 'sass-loader',
+             options: {
+               includePaths: ['./node_modules', './node_modules/sass-material-colors/sass']}
+             }
           ]
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
+        },
+        {
+          test: /\.tsx?$/,
+          loader: 'ts-loader'
         }
       ],
     },
 
     resolve: {
       modules: ['node_modules', path.resolve(__dirname, 'js')],
-      extensions: ['.js'],
+      extensions: ['.js', '.ts', '.tsx'],
     },
   };
 };

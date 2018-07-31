@@ -1,2 +1,19 @@
 
-<h1>Jesper Fridefors</h1>
+<div id="index-navigation">
+  <div class="main-text-block">
+    <h1>Jesper Fridefors</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ab sint deserunt saepe ullam corporis quo aliquam. Voluptate debitis voluptatibus vel alias molestias facilis, laboriosam dicta asperiores sapiente tempore sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid earum veritatis excepturi nostrum libero eum. A esse aspernatur quia reprehenderit quos asperiores non! Ullam corporis laborum quas et voluptatibus minima.</p>
+  </div>
+  <div class="img-block"></div>
+  <nav>
+    <h3>
+      Navigering
+    </h3>
+    <ul>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Om mig</a></li>
+      <li><a href="#">Annat</a></li>
+    </ul>
+  </nav>
+</div>
