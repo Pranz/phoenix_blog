@@ -1,7 +1,10 @@
 @import '../variables.scss';
 
-body {
+html {
   font-size: 22px;
+}
+
+body {
   font-family: "Linux Libertine";
   font-weight: 400;
   color: $standard-text-color;
@@ -16,17 +19,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
 }
 
-h2 {
+h2, h3 {
   margin: 0.5rem 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
+
 
 p {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   line-height: 1.42;
   em {
     border-width: 0 0 0 0;
@@ -47,11 +51,16 @@ p {
     font-weight: 600;
     line-height: 1.3;
   }
-  code {
-    font-size: 1rem;
-    background: #f3f3f3;
-    display: inline-block;
-    padding: 0 0.25rem;
-    margin: 0 0.2rem;
-  }
+}
+
+code {
+  font-size: 0.8rem;
+  background: #f3f3f3;
+  display: inline-block;
+  padding: 0 0.25rem;
+  line-height: 1.4;
+}
+
+pre {
+  background: #f3f3f3;
 }

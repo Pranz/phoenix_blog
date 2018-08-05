@@ -25,8 +25,19 @@
     padding: var(--big-spacing);
     display: flex;
     flex-direction: column;
-    .intro-greeting {
-      text-decoration: underline;
+    h1 {
+      span:first-child {
+        color: material-color('blue', 'a700');
+      }
+      span:nth-child(2) {
+        color: material-color('green', 'a700');
+      }
+    }
+    .intro-greeting span {
+      border-bottom: 2px solid material-color('blue', 'a100');
+      display: inline-block;
+      height: calc(100% - 7px);
+      text-shadow: 0 2px 0 white, 0 -2px 0 white, 2px 0 0 white, -2px 0 0 white;
     }
     .sign-off {
       padding-top: 2rem;

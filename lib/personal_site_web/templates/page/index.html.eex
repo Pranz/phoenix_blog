@@ -1,8 +1,10 @@
 
 <div id="index-navigation">
   <div class="main-text-block">
-    <h1>Titel</h1>
-    <p class="intro-greeting">Hej!</p>
+    <h1>
+      <span>J</span>esper <span>F</span>ridefors
+    </h1>
+    <p class="intro-greeting"><span>Hej!</span></p>
     <p>
       Jag är en mjukvaruutvecklare och student på KTH och detta är min personliga sida.
       Här kommer jag lägga upp lite småprojekt och skrivande.

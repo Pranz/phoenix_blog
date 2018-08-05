@@ -20,7 +20,7 @@ defmodule PersonalSite.Mixfile do
   def application do
     [
       mod: {PersonalSite.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :yamerl, :timex]
     ]
   end
 
@@ -40,7 +40,12 @@ defmodule PersonalSite.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:earmark, "~> 1.2.5"},
+      {:yamerl, github: "yakaz/yamerl"},
+      {:timex, "~> 3.1"},
+      {:timex_ecto,"~> 3.0"},
+      {:slugger, "~> 0.3"}
     ]
   end
 
