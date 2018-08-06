@@ -1,28 +1,29 @@
-
-<article id=blog-post-article>
-  <!--
-  <h1><%= @post.title %></h1>
-  <%= raw(@post.html) %>
-  <div>
-    <p>test</p>
-  </div>
-  -->
-  <h1>Min titel</h1>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam esse tenetur cumque mollitia! Quidem explicabo reiciendis dignissimos quo. Accusantium repellat dolorum porro nulla vitae reiciendis consectetur praesentium numquam eaque tempora?</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis dolorem quasi dolores quisquam esse nisi eveniet quibusdam autem, architecto rerum dignissimos possimus quis perferendis, ratione velit explicabo, libero ipsa nihil.</p>
-  <p class="aside" title="En titel">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </p>
-  <ol>
-    <li>Test</li>
-    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, nemo animi. Laboriosam quisquam recusandae dolor quod ipsam quis eum cumque at perferendis accusantium. Commodi qui neque reiciendis totam autem. Dolores!</li>
-    <li>Test</li>
-    <li>Använd <code>Test</code> prova</li>
-  </ol>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aspernatur, corporis, cupiditate laborum a amet quasi numquam illo voluptatibus nobis laudantium quas expedita cum mollitia maiores ipsam! Laudantium, natus laborum.</p>
-  <h3>Subtitel</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente at nemo molestiae repudiandae aliquid ab similique officiis autem. Delectus voluptas quaerat iste, omnis doloribus dolore qui vero autem dolor aliquam.</p>
-  <pre description="En liten beskrivning av koden"><code>
+<div id="blog-site-container">
+  <article id=blog-post-article>
+    <!--
+    <h1><%= @post.title %></h1>
+    <%= raw(@post.html) %>
+    <div>
+      <p>test</p>
+    </div>
+    -->
+    <h1>Min titel</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam esse tenetur cumque mollitia! Quidem explicabo reiciendis dignissimos quo. Accusantium repellat dolorum porro nulla vitae reiciendis consectetur praesentium numquam eaque tempora?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis dolorem quasi dolores quisquam esse nisi eveniet quibusdam autem, architecto rerum dignissimos possimus quis perferendis, ratione velit explicabo, libero ipsa nihil.</p>
+    <p class="aside" title="En titel">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <ol>
+      <li>Test</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, nemo animi. Laboriosam quisquam recusandae dolor quod ipsam quis eum cumque at perferendis accusantium. Commodi qui neque reiciendis totam autem. Dolores!</li>
+      <li>Test</li>
+      <li>Använd <code>Test</code> prova</li>
+    </ol>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aspernatur, corporis, cupiditate laborum a amet quasi numquam illo voluptatibus nobis laudantium quas expedita cum mollitia maiores ipsam! Laudantium, natus laborum.</p>
+    <h3>Subtitel</h3>
+    <div class="highlight"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente at nemo molestiae repudiandae aliquid ab similique officiis autem. Delectus voluptas quaerat iste, omnis doloribus dolore qui vero autem dolor aliquam.</p>
+    <pre description="En liten beskrivning av koden"><code>
 import crate::stuff;
 
 pub fn main() {
@@ -30,6 +31,11 @@ pub fn main() {
     printf("Yo, %i", i);
   }
 }
-  </code></pre>
-
-</article>
+    </code></pre>
+    <blockquote>
+     I stared at him and then at Tom, who had made a parallel discovery less than an hour before—and it occurred to me that there was no difference between men, in intelligence or race, so profound as the difference between the sick and the well. 
+    </blockquote>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam iste praesentium illum, perferendis sequi velit quam quibusdam quia expedita aperiam aspernatur nostrum. Quos dignissimos quod numquam earum! Ipsum, possimus suscipit?</p>
+  
+  </article>
+</div>
