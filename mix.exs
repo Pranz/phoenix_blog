@@ -45,7 +45,8 @@ defmodule PersonalSite.Mixfile do
       {:yamerl, github: "yakaz/yamerl"},
       {:timex, "~> 3.1"},
       {:timex_ecto,"~> 3.0"},
-      {:slugger, "~> 0.3"}
+      {:slugger, "~> 0.3"},
+      {:httpoison, "~> 1.0"}
     ]
   end
 
