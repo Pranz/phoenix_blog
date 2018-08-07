@@ -19,6 +19,7 @@ defmodule PersonalSite.Post do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:title, :source, :slug, :published_at, :last_edited_at, :html])
+    |> unique_constraint(:slug)
     |> validate_required([:title, :source, :slug, :published_at, :last_edited_at, :html])
   end
 end

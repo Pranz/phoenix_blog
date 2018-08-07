@@ -1,10 +1,11 @@
 defmodule PersonalSiteWeb.PostController do
   use PersonalSiteWeb, :controller
   import Plug.Conn
-  import Ecto.Query, only: [from: 2]
+  import Ecto.Query, only: [join: 3]
 
   alias PersonalSite.Repo
   alias PersonalSite.Post
+  alias PersonalSite.Edit
   alias PersonalSiteWeb.PostController.Helper
   alias PersonalSiteWeb.ControllerHelper
 
@@ -14,27 +15,42 @@ defmodule PersonalSiteWeb.PostController do
 
   def show(conn, %{"id" => slug}) do
     post = Repo.get_by!(Post, slug: slug)
-    render conn, ControllerHelper.extend_filename(conn, "show"), post: post
+    edits = Repo.all(Edit, post_id: post.id)
+    render conn, ControllerHelper.extend_filename(conn, "show"),
+      post: post,
+      edits: edits
   end
 
   def create(conn, _params) do
     {:ok, data, _conn_details} = conn |> read_body
-    {metadata, html, markdown} = Helper.parse_markdown(data)
-    [title, published_at] = metadata |> Helper.get_props(['title', 'published_at'])
+    {post, edit_message} = post_from_body data
+    {:ok, post} = Repo.insert post, on_conflict: :replace_all, conflict_target: :slug
+    unless edit_message == nil, do: Repo.insert %Edit{
+      message: edit_message,
+      diff: "",
+      post_id: post.id
+    }
+    json conn, %{
+      status: "created"
+    }
+  end
+
+  defp post_from_body(body) do
+    {metadata, html, markdown} = Helper.parse_markdown(body)
+    [title, published_at, edit_message] = metadata
+      |> Helper.get_props(['title', 'published_at', 'edit_message'])
     date = Timex.parse!(published_at, "%Y-%m-%d", :strftime)
-    Repo.insert(%Post{
+    post = %Post{
       title: title,
       published_at: date,
       last_edited_at: date,
       source: markdown,
       html: html,
       slug: Slugger.slugify title
-    })
-    json conn, %{
-      status: "created"
     }
-  end
 
+    {post, edit_message}
+  end
 end
 
 defmodule PersonalSiteWeb.PostController.Helper do

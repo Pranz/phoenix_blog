@@ -14,6 +14,7 @@ config :personal_site, PersonalSiteWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "5i9LwkRYbcrYfgsO6HzwyPLoBO1DWLbhlNjKFsqG9qCfhAqA7D1K7pubvgjY95Qv",
   render_errors: [view: PersonalSiteWeb.ErrorView, accepts: ~w(html json)],
+  reloadable_compilers: [:phoenix, :elixir],
   pubsub: [name: PersonalSite.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
