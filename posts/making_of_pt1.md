@@ -1,9 +1,9 @@
 ---
 title: Making of this blog, part one
-published_at: 2018-08-20
+published_at: 2018-08-09
 ---
 
-Welcome! This is my first blog post here, so if you're reading this around the 8th of August there's probably not a navbar or even an index site for this blog. But  i wanted to start writing
+Welcome! This is my first blog post here, so if you're reading this around the 9th of August there's probably not a navbar or even an index site for this blog. But  i wanted to start writing
 as soon as possible and thought it would be kinda fun to document the creation of this blog as it is happening.
 
 My old blog was statically generated with a ~100 line `gulpfile`, 
@@ -63,6 +63,6 @@ interests<sup>1</sup> as well but not really sure if I know enough about them to
 {: .aside}
 
 Well, a little bit about me then: I'm originally from Gothenburg but moved to Stockholm to study
-computer science at KTH, which I'm 2 years in. Also got a pretty sweet software engineering job over the summer and will continue with that part time. Has also freelanced as a web developer for
+computer science at KTH, which I'm 2 years in. Got a pretty sweet software engineering job over the summer and will continue with that part time. I have freelanced as a web developer for
 about 3 years on and off. If this has caught your attention, check back here in a day or two as
 there will (probably) be an RSS feed right [here](/posts/xml.rss) and maybe even another post.

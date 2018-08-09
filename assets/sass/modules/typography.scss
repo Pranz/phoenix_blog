@@ -1,5 +1,11 @@
 @import '../variables.scss';
 
+@font-face {
+  font-family: "Linux Libertine";
+  src: url('/fonts/LinLibertine_R.otf');
+  font-weight: 400;
+}
+
 html {
   font-size: 22px;
 }
