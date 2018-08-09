@@ -6,8 +6,8 @@ defmodule Mix.Tasks.PersonalSite.Publish do
     HTTPoison.start()
     filename = case args do
       [filename | _] ->
-        (filename <> ".md")
-          |> Path.expand |> Path.absname
+        filename
+          |> Path.expand() |> Path.absname
       _ ->
         "./posts"
           |> File.ls!
@@ -16,8 +16,13 @@ defmodule Mix.Tasks.PersonalSite.Publish do
             fn filename -> (File.lstat! filename).mtime end, &>=/2)
           |> Enum.at(0)
     end
+    url = case args do
+      [_ | ["prod" | _]] -> "http://18.185.97.228/posts"
+      _ -> "http://localhost:4000/posts"
+    end
+
     contents = File.read! filename
-    resp = HTTPoison.post! "http://localhost:4000/posts", contents
+    resp = HTTPoison.post! url, contents
     IO.puts resp.body
     200 = resp.status_code
     IO.puts "published " <> filename

@@ -234,5 +234,16 @@
       font-size: 1rem;
       color: #333;
     }
+    .image-credit {
+      color: #333;
+      margin-top: 0.5em;
+      &:before {
+        color: #333;
+        content:  "Image credit: ";
+        font-family: "Josefin Sans";
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
