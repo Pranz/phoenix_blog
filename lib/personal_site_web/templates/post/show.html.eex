@@ -1,6 +1,23 @@
 <div id="blog-site-container">
   <article id=blog-post-article>
-    <h1><%= @post.title %></h1>
+    <header>
+      <ol class="header-boxes-top">
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+      </ol>
+      <h1><%= @post.title %></h1>
+      <ol class="header-boxes-bottom">
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+        <li class="header-box"></li>
+      </ol>
+      <span class="author">Jesper Fridefors</span>
+    </header>
     <%= raw(@post.html) %>
   </article>
 </div>

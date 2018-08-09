@@ -35,6 +35,85 @@
   //max-width: 1400px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.35);
   @include article-grid();
+
+  header {
+    grid-column: main-content / main-content-gutter-right;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1rem;
+    grid-template-rows: minmax(200px, 25vh) min-content minmax(200px, 25vh);
+    margin-bottom: 1rem;
+    h1 {
+      grid-column: 1 / -1;
+      padding: 0.5em;
+      text-align: center;
+      border-top: 0.2em solid #333;
+      border-bottom: 0.2em solid #333;
+      margin: 0;
+    }
+    h3 {
+      grid-column: 3 / -1;
+      grid-row: 3;
+      background: transparent;
+      margin-top: 0.5rem;
+      margin-bottom: auto;
+      background: #fff;
+      font-weight: 400;
+      padding: 0.2rem 0;
+    }
+    .author {
+      grid-column: 4 / -1;
+      grid-row: 1;
+      background: #fff;
+      margin-top: auto;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 1rem;
+      padding-top: 0.25rem;
+      text-align: center;
+      font-family: "Josefin Sans";
+      font-weight: 400;
+      transition: all 200ms linear;
+      &:hover {
+        cursor: pointer;
+        background: #333;
+        color: #fff;
+      }
+    }
+    ol {
+      margin-bottom: 0;
+      display: contents;
+      list-style: none;
+      li {
+        margin: 0;
+        &:nth-child(1) { background: material-color('blue', 'a200'); }
+        &:nth-child(2) { background: material-color('green', 'a200'); }
+        &:nth-child(3) { background: material-color('amber', 'a200'); }
+        &:nth-child(4) { background: material-color('red', 'a200'); }
+        &:nth-child(5) { background: material-color('orange', 'a200'); }
+      }
+    }
+    ol.header-boxes-top {
+      @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+          grid-column-start: #{$i};
+          grid-row-start: 1;
+          height: percentage(random(100) / 100);
+          margin-top: auto;
+        }
+      }
+    }
+    ol.header-boxes-bottom {
+      @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+          grid-column-start: #{$i};
+          grid-row-start: 3;
+          height: percentage(random(100) / 100);
+        }
+      }
+    }
+  }
+
   & > * {
     grid-column: main-content / main-content-gutter-right;
     //grid-column-end: main-content-end;
@@ -65,9 +144,6 @@
       content: attr(title);
       font-variant: small-caps;
     }
-  }
-  li:not(:last-child) {
-    margin-bottom: 0.5em;
   }
   ol {
     margin-top: 0;
