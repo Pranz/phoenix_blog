@@ -18,7 +18,7 @@ config :personal_site, PersonalSiteWeb.Endpoint,
   url: [host: "jesperfridefors.se"],
   cache_static_manifest: "priv/static/cache_manifest.json",
   force_ssl: [hsts: true],
-  http: [port: 80]
+  http: [port: 80],
   https: [
     port: 443,
     otp_app: :personal_site,
