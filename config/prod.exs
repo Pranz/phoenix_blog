@@ -20,7 +20,7 @@ config :personal_site, PersonalSiteWeb.Endpoint,
   force_ssl: [hsts: true],
   http: [port: 80],
   https: [
-    port: 443,
+    port: 4002,
     otp_app: :personal_site,
     keyfile: "/etc/letsencrypt/live/jesperfridefors.se/privkey.pem",
     cacertfile: "/etc/letsencrypt/live/jesperfridefors.se/chain.pem",
