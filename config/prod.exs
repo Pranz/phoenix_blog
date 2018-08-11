@@ -15,8 +15,17 @@ use Mix.Config
 # which you typically run after static files are built.
 config :personal_site, PersonalSiteWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [host: "jesperfridefors.se"],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  force_ssl: [hsts: true],
+  http: [port: 80]
+  https: [
+    port: 443,
+    otp_app: :personal_site,
+    keyfile: "/etc/letsencrypt/live/jesperfridefors.se/privkey.pem",
+    cacertfile: "/etc/letsencrypt/live/jesperfridefors.se/chain.pem",
+    certfile: "/etc/letsencrypt/live/jesperfridefors.se/cert.pem"
+  ]
 
 # Do not print debug messages in production
 config :logger, level: :info
