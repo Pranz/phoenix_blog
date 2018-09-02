@@ -16,7 +16,9 @@ defmodule PersonalSiteWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/posts/rss.xml", PostController, :rss
     resources "/posts", PostController, only: [:index, :create, :show, :update, :delete]
+    resources "/feedback", PostController, only: [:index, :create]
   end
 
   # Other scopes may use custom stacks.

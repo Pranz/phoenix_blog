@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Jesper Fridefors</title>
+  <link>https://www.jesper.fridefors.se/posts</link>
+  <description>Personal blog for Jesper Fridefors</description>
+  <%= for post <- @posts do %>
+    <item>
+      <title><%= post.title %></title>
+      <link>https://www.jesper.fridefors.se/posts/<%=post.slug %></link>
+    </item>
+  <% end %>
+</channel>

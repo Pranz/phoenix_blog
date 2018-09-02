@@ -6,6 +6,16 @@
   font-weight: 400;
 }
 
+// @font-face {
+//   font-family: "Linux Libertine Capitals";
+//   src: url('/fonts/LinLibertine_aS.ttf');
+// }
+
+@font-face {
+  font-family: "Linux Libertine Display";
+  src: url('/fonts/LinLibertine_DRah.ttf');
+}
+
 html {
   font-size: 22px;
 }

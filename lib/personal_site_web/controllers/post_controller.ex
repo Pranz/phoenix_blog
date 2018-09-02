@@ -1,7 +1,7 @@
 defmodule PersonalSiteWeb.PostController do
   use PersonalSiteWeb, :controller
   import Plug.Conn
-  import Ecto.Query, only: [join: 3]
+  import Ecto.Query
 
   alias PersonalSite.Repo
   alias PersonalSite.Post
@@ -11,6 +11,13 @@ defmodule PersonalSiteWeb.PostController do
 
   def index(conn, _params) do
     render conn, "index.html"
+  end
+
+  def rss(conn, _params) do
+    query = from p in Post,
+      order_by: p.published_at
+    posts = Repo.all(query)
+    render conn, "rss.xml", posts: posts
   end
 
   def show(conn, %{"id" => slug}) do
@@ -31,7 +38,9 @@ defmodule PersonalSiteWeb.PostController do
       post_id: post.id
     }
     json conn, %{
-      status: "created"
+      status: (if edit_message != nil, do: "edited", else: "created"),
+      resource: "post",
+      id: post.slug
     }
   end
 

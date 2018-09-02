@@ -1,22 +1,12 @@
 <div id="blog-site-container">
   <article id=blog-post-article>
     <header>
-      <ol class="header-boxes-top">
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-      </ol>
+      <span class="encloser">{</span>
       <h1><%= @post.title %></h1>
-      <ol class="header-boxes-bottom">
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-        <li class="header-box"></li>
-      </ol>
       <span class="author">Jesper Fridefors</span>
+      <ul class="social">
+        <li><a href="/posts/rss.xml">RSS</a></li>
+      </ul>
     </header>
     <%= raw(@post.html) %>
   </article>
