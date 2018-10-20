@@ -1,6 +1,6 @@
 ---
 title: The complete guide to CSS Grid
-published_at: 2018-08-12
+published_at: 2018-09-02
 ---
 
 CSS Grid has a lot of new stuff. New properties, new units, but most importantly it

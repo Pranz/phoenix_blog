@@ -17,7 +17,7 @@ defmodule Mix.Tasks.PersonalSite.Publish do
           |> Enum.at(0)
     end
     url = case args do
-      [_ | ["prod" | _]] -> "http://18.185.97.228/posts"
+      [_ | ["prod" | _]] -> "https://jesperfridefors.se/posts"
       _ -> "http://localhost:4000/posts"
     end
 

@@ -1,9 +1,14 @@
 
 <div id="index-navigation">
-  <div class="main-text-block">
-    <h1>
-      <span>J</span>esper <span>F</span>ridefors
-    </h1>
+  <div class="introduction">
+    <h1><span>J</span>esper <span>F</span>ridefors</h1>
+  </div>
+  <div class="introduction-bg"></div>
+  <div class="section-block"></div>
+  <h2>
+    Om mig
+  </h2>
+  <div class="text-section">
     <p class="intro-greeting"><span>Hej!</span></p>
     <p>
       Jag är en mjukvaruutvecklare och student på KTH och detta är min personliga sida.
@@ -13,17 +18,26 @@
       Det jag har mest erfarenhet om är webbutveckling men intresserar mig för allt
       som har med programmering att göra, samt musik och historia.
     </p>
-    <p class="sign-off"><i>Jesper Fridefors</i></p>
   </div>
-  <div class="img-block"></div>
+  <div class="section-block"></div>
+  <h2>Navigering</h2>
   <nav>
-    <h3>
-      Navigering
-    </h3>
     <ul>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="#">Om mig</a></li>
-      <li><a href="#">Annat</a></li>
+      <li>
+        <a href="/posts">Blog</a>
+        <div class="description">Blandat om programmering och mina andra intressen.</div>
+      </li>
+      <li>
+        <a href="/posts">Github</a>
+        <div class="description">Här lägger jag upp en del personliga projekt.</div>
+      </li>
+      <li>
+        <a href="/posts">LinkedIn</a>
+      </li>
+      <li>
+        <a href="mailto:jesper.fridefors@gmail.com">Mail</a>
+        <div class="description">Om du vill kontakta mig går det bra att maila. Kan även nås via telefon på&nbsp;+46761642650.</div>
+      </li>
     </ul>
   </nav>
 </div>
