@@ -2,6 +2,9 @@
 <div id="index-navigation">
   <div class="introduction">
     <h1><span>J</span>esper <span>F</span>ridefors</h1>
+    <div class="subtitle">
+      Programmerare
+    </div>
   </div>
   <div class="introduction-bg"></div>
   <div class="section-block"></div>

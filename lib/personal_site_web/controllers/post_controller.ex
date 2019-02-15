@@ -8,9 +8,15 @@ defmodule PersonalSiteWeb.PostController do
   alias PersonalSite.Edit
   alias PersonalSiteWeb.PostController.Helper
   alias PersonalSiteWeb.ControllerHelper
+  alias PersonalSiteWeb.Endpoint
 
   def index(conn, _params) do
-    render conn, "index.html"
+    alias PersonalSiteWeb.Router.Helpers, as: Routes
+    posts = Repo.all(Post)
+    render conn, "index.html",
+      posts: posts |> Enum.map(fn post ->
+        Map.put(post, :url, Routes.post_path(Endpoint, :show, post.slug))
+      end)
   end
 
   def rss(conn, _params) do

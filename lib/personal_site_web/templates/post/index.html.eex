@@ -1,2 +1,17 @@
 
-<h1>test</h1>
+<div id="blog-index">
+  <h1>Jesper Fridefors’ Blog</h1>
+  <%= for post <- @posts do %>
+    <div class="blog-post">
+      <%= content_tag :h3, raw post.title %>
+      <%= content_tag :small, post.published_at %>
+    </div>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo quod ea quasi beatae blanditiis neque, ullam, veniam harum, officiis aliquam corporis inventore veritatis esse architecto deserunt nemo tempore aliquid!
+        <a href="<%= post.url %>">Read more</a>
+      </p>
+    </div>
+
+  <% end %>
+</div>
