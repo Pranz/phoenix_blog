@@ -16,8 +16,8 @@ defmodule PersonalSiteWeb.FeedbackController do
       json conn, %{ status: "created" }
     end
 
-    def index(conn, params) do
-      json conn, Repo.all! Feedback
+    def index(conn, _params) do
+      json conn, Repo.all Feedback
     end
 
 end

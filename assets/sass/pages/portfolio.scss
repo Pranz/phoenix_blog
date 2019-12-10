@@ -1,0 +1,105 @@
+
+#portfolio-page {
+  background: #fff;
+  min-height: 100vh;
+  display: grid;
+  padding-bottom: 4rem;
+  grid-template-columns: 
+    1fr 
+    [content-start] 1rem 
+    [main-content-start] minmax(min-content, 300px)
+    [middle-content]  minmax(400px, 800px) 
+    [main-content-end] min-content 
+    [content-end] 1rem 
+    1fr;
+  grid-auto-rows: min-content;
+  .full-width {
+    grid-column: 1 / -1;
+  }
+  .intro {
+    grid-column: middle-content;
+    margin-top: 2rem;
+  }
+  .project-title {
+    margin-top: auto;
+    white-space: nowrap;
+    padding: 0 1rem;
+    background: #FFFF00;
+    h2 {
+      margin-bottom: 0;
+      display: inline-block;
+    }
+    &.left {
+      grid-column: main-content-start;
+    }
+  }
+  .project-title-underline {
+    height: 4px;
+    background: #333;
+    &.left {
+      grid-column: 1 / middle-content;
+    }
+  }
+  .project-separator {
+    height: 6rem;
+    grid-column: 1 / -1;
+  }
+  .project-image {
+    width: auto;
+    grid-row-end: span 2;
+    grid-column: middle-content;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    img {
+      width: 100%;
+    }
+  }
+  .project-info {
+    border-top: 4px solid #333;
+    grid-row-end: span 2;
+    background: #f9f9f9;
+    $text-color: #333;
+    color: $text-color;
+    &.right {
+      grid-column: main-content-end / -1;
+    }
+    h4 {
+      margin-bottom: 0;
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      border-bottom: 4px solid #ccc;
+      margin-left: 0.5rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      font-family: "Josefin Sans";
+      font-weight: 900;
+      padding-left: 0.75rem;
+      margin-left: 0;
+      list-style: none;
+      a {
+        font-weight: 400;
+        text-decoration: none;
+        color: #333;
+        &:before {
+          content: '→ ';
+        }
+        &:hover {
+          color: #888;
+        }
+      }
+    }
+  }
+  .project-description {
+    border-top: 4px solid #333;
+    background: #f9f9f9;
+    &.left {
+      grid-column: 1 / middle-content;
+      p {
+        margin-left: 2rem;
+      }
+    }
+  }
+}

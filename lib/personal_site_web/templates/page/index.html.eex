@@ -1,30 +1,11 @@
 
-<div id="index-navigation">
-  <div class="introduction">
-    <h1><span>J</span>esper <span>F</span>ridefors</h1>
-    <div class="subtitle">
-      Programmerare
-    </div>
-  </div>
-  <div class="introduction-bg"></div>
-  <div class="section-block"></div>
-  <h2>
-    Om mig
-  </h2>
-  <div class="text-section">
-    <p class="intro-greeting"><span>Hej!</span></p>
-    <p>
-      Jag är en mjukvaruutvecklare och student på KTH och detta är min personliga sida.
-      Här kommer jag lägga upp lite småprojekt och skrivande.
-    </p>
-    <p>
-      Det jag har mest erfarenhet om är webbutveckling men intresserar mig för allt
-      som har med programmering att göra, samt musik och historia.
-    </p>
-  </div>
-  <div class="section-block"></div>
-  <h2>Navigering</h2>
+<div id="index-page">
+  <h1>
+    <span class="first-name">Jesper</span> 
+    <span class="last-name">Fridefors</span>
+  </h1>
   <nav>
+    <h2>Navigering</h2>
     <ul>
       <li>
         <a href="/posts">Blog</a>
@@ -43,4 +24,21 @@
       </li>
     </ul>
   </nav>
+  <div class="text-section">
+    <div class="inner">
+      <h2>
+        Om mig
+      </h2>
+      <p class="intro-greeting"><span>Hej!</span></p>
+      <p>
+        Jag är en mjukvaruutvecklare och student på KTH och detta är min personliga sida.
+        Här kommer jag lägga upp lite småprojekt och skrivande.
+      </p>
+      <p>
+        Det jag har mest erfarenhet om är webbutveckling men intresserar mig för allt
+        som har med programmering att göra, samt musik och historia.
+      </p>
+    
+    </div>
+  </div>
 </div>

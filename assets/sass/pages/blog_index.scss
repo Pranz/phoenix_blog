@@ -1,8 +1,8 @@
 
 $separator: 1px solid #ccc;
 
-
 #blog-index {
+  $border-color: #ccc;
   background: white;
   min-height: 100vh;
   display: grid;
@@ -18,22 +18,34 @@ $separator: 1px solid #ccc;
   }
   .blog-post {
     padding: 3rem 1rem;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    background: white;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    background: #FDDB29;
+    border-bottom: 4px solid darken(#FDDB29, 20%);
     small {
       font-weight: 300;
+      letter-spacing: 0.05em;
       font-family: "Josefin Sans";
       margin-top: auto;
+      color: darken(#FDDB29, 35%);
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        color: darken(#FDDB29, 35%);
+      }
     }
     h3 {
       font-weight: 400;
     }
-    &:nth-child(4n) {
+    &[count="0"] {
       grid-column: 4 / 5;
+      border-right: 4px solid darken(#FDDB29, 20%);
     }
-    &:nth-child(4n + 2) {
+    &[count="1"] {
       grid-column: 2 / 3;
     }
   }
@@ -41,6 +53,8 @@ $separator: 1px solid #ccc;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
+    border-bottom: 4px solid $border-color;
+    background: #f9f9f9;
     p {
       margin: auto;
       a {
@@ -49,10 +63,10 @@ $separator: 1px solid #ccc;
         font-size: 0.8rem;
       }
     }
-    &:nth-child(4n + 3) {
+    &[count="1"] {
       grid-column: 3 / 5;
     }
-    &:nth-child(4n + 1) {
+    &[count="0"] {
       grid-column: 2 / 4;
     }
   }

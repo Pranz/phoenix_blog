@@ -20,7 +20,7 @@ defmodule PersonalSite.Mixfile do
   def application do
     [
       mod: {PersonalSite.Application, []},
-      extra_applications: [:logger, :runtime_tools, :yamerl, :timex]
+      extra_applications: [:logger, :runtime_tools, :yamerl, :timex, :fs]
     ]
   end
 
@@ -46,7 +46,8 @@ defmodule PersonalSite.Mixfile do
       {:timex, "~> 3.1"},
       {:timex_ecto,"~> 3.0"},
       {:slugger, "~> 0.3"},
-      {:httpoison, "~> 1.0"}
+      {:httpoison, "~> 1.0"},
+      {:fs, github: "synrc/fs"}
     ]
   end
 

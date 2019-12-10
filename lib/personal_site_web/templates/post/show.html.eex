@@ -1,7 +1,6 @@
 <div id="blog-site-container">
   <article id=blog-post-article>
     <header>
-      <span class="encloser">{</span>
       <h1><%= @post.title %></h1>
       <span class="author">Jesper Fridefors</span>
       <ul class="social">

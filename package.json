@@ -19,6 +19,7 @@
     "watch": "webpack --mode development --watch-stdin"
   },
   "dependencies": {
-    "normalize-css": "^2.3.1"
+    "normalize-css": "^2.3.1",
+    "typescript": "^3.5.2"
   }
 }

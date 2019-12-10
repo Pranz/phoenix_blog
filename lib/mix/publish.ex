@@ -21,6 +21,31 @@ defmodule Mix.Tasks.PersonalSite.Publish do
       _ -> "http://localhost:4000/posts"
     end
 
+    publish_file(url, filename)
+
+    if Enum.member?(args, "--watch") do
+      :fs.start_link(:post_watcher, filename |> Path.dirname)
+      :fs.subscribe(:post_watcher)
+
+      IO.puts "Start watching for updates"
+
+      recv_loop(filename, url)
+    end
+  end
+
+  defp recv_loop(filename, url) do
+    receive do
+      {_pid, {:fs, :file_event}, {changedFile, type}} ->
+        if("#{filename}" == "#{changedFile}" && type == [:modified, :closed]) do
+          publish_file(url, filename)
+        end
+    end
+    recv_loop(filename, url)
+  end
+
+  defp publish_file(url, filename) do
+    IO.inspect url
+    IO.inspect filename
     contents = File.read! filename
     resp = HTTPoison.post! url, contents
     IO.puts resp.body

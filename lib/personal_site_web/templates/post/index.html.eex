@@ -1,12 +1,12 @@
 
 <div id="blog-index">
   <h1>Jesper Fridefors’ Blog</h1>
-  <%= for post <- @posts do %>
-    <div class="blog-post">
-      <%= content_tag :h3, raw post.title %>
+  <%= for {post, ix} <- Enum.with_index(@posts) do %>
+    <div class="blog-post" count="<%= 1 %>">
+      <a href="<%= post.url %>"> <%= content_tag :h3, raw post.title %></a>
       <%= content_tag :small, post.published_at %>
     </div>
-    <div class="description">
+    <div class="description" count="<%= 1 %>">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo quod ea quasi beatae blanditiis neque, ullam, veniam harum, officiis aliquam corporis inventore veritatis esse architecto deserunt nemo tempore aliquid!
         <a href="<%= post.url %>">Read more</a>

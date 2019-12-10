@@ -1,0 +1,53 @@
+<div id="portfolio-page">
+  <div class="intro">
+    <h1>Jesper Fridefors` Portfolio</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quibusdam doloribus, consectetur veniam quidem voluptas unde, aliquid, accusamus numquam ipsam vero fuga quae hic distinctio dolores maxime sint facilis qui.</p>
+  </div>
+  <div class="project-title left">
+    <h2>Wall of Art</h2>
+  </div>
+  <div class="project-image">
+    <img src="<%= static_path(@conn, "/images/WoA_front.png") %>" >
+  </div>
+  <div class="project-info right">
+    <h4>Teknologier</h4>
+    <ul>
+      <li>Shopify</li>
+      <li>Sass</li>
+      <li>Amazon Web Services</li>
+      <li>Python</li>
+      <li>Node.js</li>
+    </ul>
+    <h4>Länkar</h4>
+    <ul>
+      <li><a href="https://wallofart.se">Hemsida</a></li>
+    </ul>
+  </div>
+  <div class="project-description left">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus labore voluptatum assumenda porro optio dolorem totam et, veritatis veniam, omnis sapiente quam maxime aspernatur? Suscipit adipisci vitae explicabo dolorum? Consequatur.</p>
+  </div>
+  <div class="project-separator"></div>
+  <div class="project-title left">
+    <h2>Add Ice Cream</h2>
+  </div>
+  <div class="project-image">
+    <img src="<%= static_path(@conn, "/images/AddIce_front.png") %>" alt="">
+  </div>
+  <div class="project-info right">
+    <h4>Teknologier</h4>
+    <ul>
+      <li>PHP</li>
+      <li>MySQL</li>
+      <li>Sass</li>
+      <li>JavaScript</li>
+      <li>Animation</li>
+    </ul>
+    <h4>Länkar</h4>
+    <ul>
+      <li><a href="https://addicecream.com">Hemsida</a></li>
+    </ul>
+  </div>
+  <div class="project-description left">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus labore voluptatum assumenda porro optio dolorem totam et, veritatis veniam, omnis sapiente quam maxime aspernatur? Suscipit adipisci vitae explicabo dolorum? Consequatur.</p>
+  </div>
+</div>

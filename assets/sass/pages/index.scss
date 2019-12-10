@@ -1,133 +1,67 @@
 @import '../variables.scss';
+@import '_sass-material-colors';
 
-#index-navigation {
+#index-page {
   display: grid;
-  grid-template-columns: minmax(1rem, 8rem) max-content minmax(400px, 700px) 1fr minmax(1rem, 4rem);
-  background: #fff;
+  grid-template-rows: max-content 1fr;
   min-height: 100vh;
-  grid-auto-rows: min-content;
-  padding-bottom: 4rem;
-  .introduction-bg {
-    grid-column: 1 / 3;
-    grid-row: 1;
-    background: #333;
-    background: material-color('blue', '400');
-  }
-  h2 {
-    font-size: 1.15rem;
-  }
-  .introduction {
-    grid-column: 3 / 4;
-    margin-bottom: 4rem;
-    grid-row: 1;
-    margin-top: 4rem;
-    margin-left: 1rem;
-    z-index: 10;
-    h1 {
-      font-size: 3rem;
-      letter-spacing: -0.04em;
-      margin-bottom: 0;
-      z-index: 3;
-      // span:first-child {
-      //   position: relative;
-      //   &:before {
-      //     content: 'J';
-      //     position: absolute;
-      //     top: -0.4em;
-      //     right: -0.11em;
-      //     z-index: -1;
-      //     font-size: 12rem;
-      //     color: material-color('cyan', '100');
-      //   }
-      // }
-      // span:nth-child(2) {
-      //   position: relative;
-      //   &:before {
-      //     content: 'F';
-      //     position: absolute;
-      //     top: -0.4em;
-      //     right: -0.34em;
-      //     z-index: -1;
-      //     font-size: 12rem;
-      //     color: material-color('yellow', '200');
+  grid-template-columns: 
+    [first-col] min-content 
+    [content] 1fr;
 
-      //   }
-      // }
+
+  @media screen and (min-width: 800px) {
+    h1 .first-name, nav {
+      padding-left: 2rem;
     }
-    .subtitle {
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.3);
-      font-family: "Josefin Sans";
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: -0.04em;
+    nav {
+      padding-right: 1rem;
+      background:  material-color('green', '200');
     }
-  }
-  & > h1, & > h2, & > h3 {
-    grid-column: 2;
-    margin-top: 0;
-    padding-right: 2rem;
-  }
-  .text-section {
-    grid-column: 3;
-    padding-left: 1rem;
-    margin-bottom: 1.5rem;
-    p {
-      font-size: 1rem;
-    }
-    .intro-greeting {
-      margin-top: 0;
-    }
-  }
-  nav {
-    grid-column: 3;
-    ul {
-      list-style: none;
-      padding: 0;
-      padding-left: 1rem;
-      margin-top: 0;
-      li {
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #e4e4e4;
-        padding-bottom: 0.25em;
-        a {
-          text-transform: uppercase;
-          font-family: "Josefin Sans";
-          font-size: 0.75rem;
-          text-decoration: none;
-          color: material-color('blue', '700');
-          &:hover {
-            color: material-color('blue', '900');
-          }
-        }
+    h1 {
+      font-size: calc(2rem + 5vw);
+      display: contents;
+      .first-name {
+        grid-column-start: first-col;
+        padding-right: 0.25ch;
+      }
+      .last-name {
+        padding-left: 0.15ch;
+      }
+      span {
+        border-bottom: 0.25em double currentColor;
+        line-height: 1.2;
+        padding-top: 2rem;
       }
     }
-    .description {
-      font-size: 0.85rem;
-      margin-top: 0.15rem;
+    .last-name, .text-section {
+      background: material-color('green', '100');
+    }
+    .text-section .inner {
+      margin-left: 1rem;
     }
   }
-  .section-block {
-    display: contents;
-    &:before {
-      grid-column: 1 / 3;
-      height: 0.75rem;
-      background: material-color('blue', '400');
-      margin-bottom: 1.5rem;
-      content: '';
-      border-bottom-right-radius: 0.75rem;
-      z-index: 3;
+  @media screen and (max-width: 799px) {
+    grid-template-columns: [first-col content] 1fr;
+    padding: 4rem 1.5rem;
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
     }
-    &:after {
-      grid-column: 3 / 4;
-      height: 0.75rem;
-      background: material-color('blue', '100');
-      content: '';
-      border-bottom-right-radius: 0.75rem;
-      position: relative;
-      left: -0.75rem;
-      z-index: 0;
-      width: calc(100% + 0.75rem);
+  }
+
+  nav {
+    grid-column-start: first-col;
+    ul {
+      padding-left: 0;
     }
+  }
+  .text-section {
+    display: flex;
+  }
+  .text-section .inner {
+    max-width: 80ch;
+    margin-right: auto;
   }
 }
